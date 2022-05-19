@@ -1,0 +1,127 @@
+<html>
+
+<head>
+
+<title>Tonton Stallman</title>
+
+<style>
+
+body {
+	background-color : peachpuff;
+	font-family: 'Sans-Serif';
+	color: black;
+	text-align: center;
+}
+
+.txt {
+	text-align: left;
+	font-size: 20px;
+	padding  : 20px;
+}
+
+
+
+.titre {
+	font-size: 30px;
+	font-weight : bold;
+	text-align: left;
+	padding: 20px;
+}
+
+.img {
+	box-shadow: 5px 5px 3px 1px #000;
+	border-width: 3px;
+	border-color: black;
+	border-style: solid;
+	padding: 0;
+}
+
+.txtimage_parent {
+	position: relative;
+	line-height; 0;
+}
+
+.txtimg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 20px;
+	padding: 10;
+	border-width: 2;
+	border-color: black;
+	border-style: solid;
+	background-color: yellow;
+}
+</style>
+
+</head>
+
+<body>
+
+<br/>
+
+
+<p style="font-size:30px; font-weight: bold;"> RICHARD M. STALLMAN </p>
+
+
+<br/>
+
+
+<div class="txtimage_parent">
+
+<img src="richard1.jpg" id="img1" class="img" style="width : 400px;">
+	<abbr id="txtimg1" class="txtimg" style="visibility: hidden;">Stallman dans son "costume de cérémonie", <br/> le couvre-chef vient d'un vieux disque dur</abbr>
+
+
+</div>
+
+<br/>
+
+
+<p class="txt">
+Richard Matthew Stallman est un développeur américain. Né le 16 Mars 1953, il étudie à Harvard et au MIT. Il est connu pour son activisme vis-à-vis des logiciels libres. Il défend profondément l'usage des logiciels libres. Il a par exemple fondé le 
+<a href="https://www.gnu.org/home.fr.html"title="Voir Plus">projet GNU</a>
+, un projet visant à la collaboration pour créer, publier et supporter les logiciels libres.
+</p>
+
+
+<br/>
+
+<div class="titre">Qu'est-ce qu'un logiciel libre ?</div>
+
+<br/>
+
+<p class="txt">
+Un logiciel libre 
+</p>
+
+<script>
+
+img1=document.getElementById("img1");
+txtimg1=document.getElementById("txtimg1");
+
+
+function img1_act_callback(ev) {
+	console.log('img1_survol');
+	txtimg1.style="visibility: visible;";
+	img1.style="filter: grayscale(1); width : 400px;";
+}
+
+function img1_desact_callback(ev) {
+	console.log('img1_desurvol');
+	txtimg1.style="visibility: hidden;";
+	img1.style="filter: grayscale(0); width : 400px;";
+}
+
+
+
+img1.addEventListener("mouseover", img1_act_callback);
+img1.addEventListener("mouseleave", img1_desact_callback);
+txtimg1.addEventListener("mouseover", img1_act_callback);
+txtimg1.addEventListener("mouseleave", img1_desact_callback);
+</script>
+
+</body>
+
+</html>
