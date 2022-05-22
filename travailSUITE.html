@@ -1,0 +1,203 @@
+<html>
+
+<head>
+
+<title>Tonton Stallman</title>
+
+<style>
+
+body {
+	background-color : peachpuff;
+	font-family: 'Sans-Serif';
+	color: black;
+	text-align: center;
+}
+
+.txt {
+	text-align: left;
+	font-size: 20px;
+	padding  : 20px;
+}
+
+
+
+.titre {
+	font-size: 30px;
+	font-weight : bold;
+	text-align: left;
+	padding: 20px;
+}
+
+.img {
+	box-shadow: 5px 5px 3px 1px #000;
+	border-width: 3px;
+	border-color: black;
+	border-style: solid;
+	padding: 0;
+}
+
+.txtimage_parent {
+	position: relative;
+	line-height; 0;
+}
+
+.txtimg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 20px;
+	padding: 10;
+	border-width: 2;
+	border-color: black;
+	border-style: solid;
+	background-color: yellow;
+}
+</style>
+
+</head>
+
+<body>
+
+<br/>
+
+
+<p style="font-size:30px; font-weight: bold;"> RICHARD M. STALLMAN </p>
+
+
+<br/>
+
+
+<div class="txtimage_parent">
+
+<img src="richard1.jpg" id="img1" class="img" style="width : 400px;">
+	<abbr id="txtimg1" class="txtimg" style="visibility: hidden;">Stallman dans son "costume de cérémonie", <br/> le couvre-chef vient d'un vieux disque dur</abbr>
+
+
+</div>
+
+<br/>
+
+
+<p class="txt">
+Richard Matthew Stallman est un développeur américain. Né le 16 Mars 1953, il étudie à Harvard et au MIT. Il est connu pour son activisme vis-à-vis des logiciels libres. Il défend profondément l'usage des logiciels libres. Il a par exemple fondé en 1985 la 
+<a href="https://www.fsf.org/fr"title="Voir Plus">Free Software Foundation</a> (FSF)
+, un projet visant à la  promotion et la collaboration pour créer, publier et supporter les logiciels libres.
+</p>
+
+
+<br/>
+
+<div class="titre">Qu'est-ce qu'un logiciel libre ?</div>
+
+<br/>
+
+<p class="txt">
+Un logiciel libre est un logiciel que l'on peut utiliser, modifier ou même republier librement, de manière légale. <br/> Il ne faut pas confondre un logiciel libre avec un logiciel gratuit, Un logiciel gratuit permet juste d'utiliser le logiciel, cela reste un logiciel dit "propriétaire". Avec un logiciel libre, on 
+peut accéder au code du logiciel, l'étudier ou le modifier. <br/> Des exemples de logicels libres sont GIMP, blender, Firefox, Thunderbird, ...
+</p>
+
+<div>
+
+<span class="txtimage_parent" style="margin: 20px;">
+
+<img src="logo_gnu.jpg" id="img2" class="img" style="width : 400px;">
+	<abbr id="txtimg2" class="txtimg" style="visibility: hidden;">Le logo de projet GNU de Stallman, <br/> Initiatieur de mouvement des logiciels libres</abbr>
+
+
+</span>
+
+<span class="txtimage_parent" style="margin: 20px;">
+
+<img src="logiciels_libres.jpg" id="img3" class="img" style="width : 400px;">
+	<abbr id="txtimg3" class="txtimg" style="visibility: hidden;">Des exemples de logiciels libres et de groupes liés aux logiciels libres</abbr>
+
+
+</span>
+
+</div>
+ 
+ <p class="txt">
+ Le <a href="https://www.gnu.org/home.fr.html"title="Voir Plus">projet GNU</a>, fondé en 1983 par Stallman avec la FSF a donc, à l'origine, l'ambition de créer un système d'exploitation reposant uniquement sur un ensemble de logiciels libres. La première version de ce système d'exploitation est réalisée avec le noyau Linux, développé indépendamment, créant le système GNU/Linux.
+ <br/> Des exemples d'OS basés sur GNU/Linux : Ubuntu, Linux Mint, Debian, Parrot OS, ...
+</p>
+
+<br/>
+
+<div class="titre">Récentes controverses</div>
+
+<br/>
+
+<p class="txt">
+
+</p>
+
+
+<script>
+
+img1=document.getElementById("img1");
+txtimg1=document.getElementById("txtimg1");
+img2=document.getElementById("img2");
+txtimg2=document.getElementById("txtimg2");
+img3=document.getElementById("img3");
+txtimg3=document.getElementById("txtimg3");
+
+function img1_act_callback(ev) {
+	console.log('img1_survol');
+	txtimg1.style="visibility: visible;";
+	img1.style="filter: grayscale(1); width : 400px;";
+}
+
+function img1_desact_callback(ev) {
+	console.log('img1_desurvol');
+	txtimg1.style="visibility: hidden;";
+	img1.style="filter: grayscale(0); width : 400px;";
+}
+
+function img2_act_callback(ev) {
+	console.log('img1_survol');
+	txtimg2.style="visibility: visible;";
+	img2.style="filter: grayscale(1); width : 400px;";
+}
+
+function img2_desact_callback(ev) {
+	console.log('img1_desurvol');
+	txtimg2.style="visibility: hidden;";
+	img2.style="filter: grayscale(0); width : 400px;";
+}
+
+function img3_act_callback(ev) {
+	console.log('img1_survol');
+	txtimg3.style="visibility: visible;";
+	img3.style="filter: grayscale(1); width : 400px;";
+}
+
+function img3_desact_callback(ev) {
+	console.log('img1_desurvol');
+	txtimg3.style="visibility: hidden;";
+	img3.style="filter: grayscale(0); width : 400px;";
+}
+
+function img_act_callback(ev,x) {
+	console.log("image", x);
+}
+
+img1.addEventListener("mouseover", img1_act_callback);
+img1.addEventListener("mouseleave", img1_desact_callback);
+txtimg1.addEventListener("mouseover", img1_act_callback);
+txtimg1.addEventListener("mouseleave", img1_desact_callback);
+
+img2.addEventListener("mouseover", img2_act_callback);
+img2.addEventListener("mouseleave", img2_desact_callback);
+txtimg2.addEventListener("mouseover", img2_act_callback);
+txtimg2.addEventListener("mouseleave", img2_desact_callback);
+
+img3.addEventListener("mouseover", img3_act_callback);
+img3.addEventListener("mouseleave", img3_desact_callback);
+txtimg3.addEventListener("mouseover", img3_act_callback);
+txtimg3.addEventListener("mouseleave", img3_desact_callback);
+</script>
+
+</body>
+
+</html>
